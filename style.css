@@ -1,0 +1,160 @@
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1a202c;
+    background-color: #f7fafc;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: linear-gradient(135deg, #4f46e5, #3730a3);
+    overflow: hidden;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero-section .highlight {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #f6ad55;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    display: block;
+}
+
+.hero-section p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    color: white;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #f6ad55;
+    color: #1a202c;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(246, 173, 85, 0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(246, 173, 85, 0.6);
+}
+
+/* Floating Images for Hero */
+.hero-floating-image {
+    position: absolute;
+    opacity: 0.15;
+    animation: float 20s ease-in-out infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Floating Images for Lead Magnet */
+.lead-magnet-floating-image {
+    position: absolute;
+    opacity: 0.5;
+    animation: float 20s ease-in-out infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Posiciones y tamaños de las imágenes en desktop */
+.hero-img-1 { top: 10%; left: 10%; width: 150px; animation-delay: 0s; }
+.hero-img-2 { top: 50%; left: 70%; width: 120px; animation-delay: 5s; }
+.hero-img-3 { bottom: 10%; left: 30%; width: 100px; animation-delay: 10s; }
+.hero-img-4 { top: 30%; left: 5%; width: 130px; animation-delay: 15s; }
+.hero-img-5 { bottom: 20%; left: 80%; width: 140px; animation-delay: 20s; }
+
+.lm-img-1 { top: 20%; left: 5%; width: 100px; animation-delay: 0s; }
+.lm-img-2 { top: 50%; left: 85%; width: 120px; animation-delay: 5s; }
+.lm-img-3 { bottom: 15%; left: 25%; width: 90px; animation-delay: 10s; }
+.lm-img-4 { top: 10%; right: 15%; width: 110px; animation-delay: 15s; }
+.lm-img-5 { bottom: 30%; right: 5%; width: 130px; animation-delay: 20s; }
+
+/* Testimonial styles */
+.star-rating .star {
+    color: #FFD700;
+    font-size: 1.5rem;
+}
+
+/* Accordion styles */
+.accordion-item {
+    border-bottom: 1px solid #e2e8f0;
+}
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #4f46e5;
+}
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+.accordion-button[aria-expanded="true"] .accordion-icon {
+    transform: rotate(180deg);
+}
+.accordion-content {
+    padding: 1rem 0;
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section h1 { font-size: 1.75rem; }
+    .hero-section p { font-size: 0.9rem; }
+    .hero-section .highlight { font-size: 2.2rem; }
+    .hero-floating-image, .lead-magnet-floating-image { opacity: 0.1; width: 80px; }
+    .hero-img-1 { top: 5%; left: 5%; }
+    .hero-img-2 { top: 20%; left: 80%; }
+    .hero-img-3 { bottom: 5%; left: 20%; }
+    .hero-img-4 { top: 50%; left: 10%; }
+    .hero-img-5 { bottom: 20%; left: 70%; }
+    
+    .lm-img-1 { top: 10%; left: 5%; }
+    .lm-img-2 { top: 25%; left: 75%; }
+    .lm-img-3 { bottom: 10%; left: 15%; }
+    .lm-img-4 { top: 60%; right: 5%; }
+    .lm-img-5 { bottom: 25%; right: 70%; }
+}
