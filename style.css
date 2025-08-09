@@ -94,7 +94,7 @@ body {
     100% { transform: translateY(0) rotate(0deg); }
 }
 
-/* Posiciones y tamaÒos de las im·genes en desktop */
+/* Posiciones y tama√±os de las im√°genes en desktop */
 .hero-img-1 { top: 10%; left: 10%; width: 150px; animation-delay: 0s; }
 .hero-img-2 { top: 50%; left: 70%; width: 120px; animation-delay: 5s; }
 .hero-img-3 { bottom: 10%; left: 30%; width: 100px; animation-delay: 10s; }
@@ -157,4 +157,23 @@ body {
     .lm-img-3 { bottom: 10%; left: 15%; }
     .lm-img-4 { top: 60%; right: 5%; }
     .lm-img-5 { bottom: 25%; right: 70%; }
+
+}/* Fix platos lavados en el hero */
+#hero img,
+.hero img,
+.hero .plato,
+.hero .plato img {
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Si hay overlay o velo encima del hero */
+.hero::before,
+#hero::before,
+.hero *[style*="opacity"],
+.hero [class*="overlay"] {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  filter: none !important;
 }
